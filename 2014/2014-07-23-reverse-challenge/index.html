@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  
+  <link rel="next" href="https://www.richfairhurst.co.uk/2014/2014-12-14-bsides-london-2014-challenge-1/" />
+  <link rel="canonical" href="https://www.richfairhurst.co.uk/2014/2014-07-23-reverse-challenge/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Coursera Reverse Challenge | Rich Fairhurst
+       
+  </title>
+  <meta name="title" content="Coursera Reverse Challenge | Rich Fairhurst">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Coursera Reverse Challenge"/>
+<meta name="twitter:description" content="Last month the Coursera course &lsquo;Malicious Software and its Underground Economy: Two Sides to Every Story&rsquo; finished.
+The course was run over 6 weeks and included a bunch of video lectures each week followed by additional reading and a quiz. You can find an overview of the course here. It looks like this was the second time the course has been run - which is probably about right, I&rsquo;m normally late to the party."/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Coursera Reverse Challenge",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/www.richfairhurst.co.uk\/2014\/2014-07-23-reverse-challenge\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/www.richfairhurst.co.uk\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "single",
+  
+  "wordcount":  1059 ,
+  "url": "https:\/\/www.richfairhurst.co.uk\/2014\/2014-07-23-reverse-challenge\/",
+  "datePublished": "2014-07-23T00:00:00\u002b00:00",
+  "dateModified": "2014-07-23T00:00:00\u002b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/www.richfairhurst.co.uk\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fastbyte01"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://www.richfairhurst.co.uk">Rich Fairhurst</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://www.richfairhurst.co.uk">Rich Fairhurst</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Coursera Reverse Challenge</h1>
+        
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+
+          
+          
+          
+
+          
+          
+          
+
+          <p>Last month the Coursera course &lsquo;Malicious Software and its Underground Economy: Two Sides to Every Story&rsquo; finished.</p>
+<p>The course was run over 6 weeks and included a bunch of video lectures each week followed by additional reading and a quiz. You can find an overview of the course <a href="https://www.coursera.org/course/malsoftware">here</a>. It looks like this was the second time the course has been run -  which is probably about right, I&rsquo;m normally late to the party.</p>
+<p>There wasn&rsquo;t as much hands on reversing engineering as I had hoped for - there was a video walk through of reversing a binary and then a &lsquo;challenge&rsquo; as part of the final quiz. Since the course has now finished it&rsquo;s probably safe to post my write up of the final reversing challenge.</p>
+<p>In a nutshell a download link was provided to a file and the challenge was to determine the correct password. You can find a locally cached copy of the challenge file <a href="/downloads/reverse-challenge">here</a></p>
+<p>Lets start by running the command <strong>file</strong> on the executable to confirm what type of file it is ( and if they were being kind and had left any debugging symbols :-)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rich<span style="color:#a6e22e">@ubuntu</span>:<span style="color:#f92672">~</span><span style="color:#960050;background-color:#1e0010">$</span> file reverse<span style="color:#f92672">-</span>challenge
+</span></span><span style="display:flex;"><span>reverse<span style="color:#f92672">-</span>challenge: ELF <span style="color:#ae81ff">32</span><span style="color:#f92672">-</span>bit LSB  executable, Intel <span style="color:#ae81ff">80386</span>, version <span style="color:#ae81ff">1</span> (SYSV), dynamically linked (uses shared libs), <span style="color:#66d9ef">for</span> GNU<span style="color:#f92672">/</span>Linux <span style="color:#ae81ff">2.6.32</span>, BuildID[sha1]<span style="color:#f92672">=</span><span style="color:#ae81ff">43</span>cb53541a366b39ab4b73f31a4fac8961ad959c, stripped
+</span></span></code></pre></div><p>And then run strings to look for anything interesting&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rich<span style="color:#a6e22e">@ubuntu</span>:<span style="color:#f92672">~</span><span style="color:#960050;background-color:#1e0010">$</span> strings reverse<span style="color:#f92672">-</span>challenge
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>tmp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>b2<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>XXXXf
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>tmp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>b1<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>XXXXf
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">^</span>_]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@EHJ</span><span style="color:#f92672">~</span><span style="color:#a6e22e">@DZEL</span>
+</span></span><span style="display:flex;"><span>woot<span style="color:#960050;background-color:#1e0010">!</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">134.219.148.8</span>
+</span></span><span style="display:flex;"><span>Dude, no debugging ;<span style="color:#f92672">-</span>)
+</span></span><span style="display:flex;"><span>Are you feeling lucky today<span style="color:#960050;background-color:#1e0010">?</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">+</span>] WooT<span style="color:#960050;background-color:#1e0010">!</span> THE KEY IS: <span style="color:#f92672">%</span>s
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">+</span>] If you want, now open a terminal <span style="color:#f92672">and</span> type:
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">|</span> nc <span style="color:#f92672">%</span>s <span style="color:#f92672">%</span>d
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">~</span>] Maybe<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">-</span>] Nope<span style="color:#f92672">.</span>
+</span></span></code></pre></div><p>The string <strong>@EHJ~@DZEL</strong> looks very much like an XOR&rsquo;ed string ( we&rsquo;ll come back to this shortly ) lets now run the executable via IDA Pro&rsquo;s build in debugger and see what happens&hellip;</p>
+<figure><img src="/images/reverse-challenge1.png"/>
+</figure>
+
+<p>Whoa thats not cool bro! It seems that the executable bombs out if it detects the use of a debugger! Obviously some anti debugging protection going on here&hellip;lets strace this file to see whats going on ( or we could just read the source in IDA Pro, but strace is cool right? )</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rich<span style="color:#a6e22e">@ubuntu</span>:<span style="color:#f92672">~</span><span style="color:#960050;background-color:#1e0010">$</span> strace <span style="color:#f92672">./</span>reverse<span style="color:#f92672">-</span>challenge
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>ptrace(PTRACE_TRACEME, <span style="color:#ae81ff">3639303790</span>, <span style="color:#ae81ff">0xbff9fd34</span>, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> EPERM (Operation <span style="color:#f92672">not</span> permitted)
+</span></span><span style="display:flex;"><span>fstat64(<span style="color:#ae81ff">1</span>, {st_mode<span style="color:#f92672">=</span>S_IFCHR<span style="color:#f92672">|</span><span style="color:#ae81ff">0620</span>, st_rdev<span style="color:#f92672">=</span>makedev(<span style="color:#ae81ff">136</span>, <span style="color:#ae81ff">11</span>), <span style="color:#f92672">...</span>}) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>mmap2(NULL, <span style="color:#ae81ff">4096</span>, PROT_READ<span style="color:#f92672">|</span>PROT_WRITE, MAP_PRIVATE<span style="color:#f92672">|</span>MAP_ANONYMOUS, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0xb772f000</span>
+</span></span><span style="display:flex;"><span>write(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;Dude, no debugging ;-)</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">23</span>Dude, no debugging ;<span style="color:#f92672">-</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>This a common anti-analysis technique that works on the basis that the executable checks to see if it can debug itself. If the executable is already running in a debugger then the call to ptrace() fails since there can be only be one debugger active at a time - the executable then returns an error, displays the &ldquo;Dude no debugging&rdquo; message and quits. Lets look at the code in IDA Pro and figure out a way to bypass or remove this anti debugging&hellip;</p>
+<figure><img src="/images/reverse-challenge2.png"/>
+</figure>
+
+<p>There are numerous ways to defeat this&hellip;we could zero ( nop ) out the:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mov al, <span style="color:#ae81ff">1</span>Ah
+</span></span></code></pre></div><p>or write our own ptrace() function that always returns 0 and load it via LD_PRELOAD or since the jump at the end is conditional (jump if not zero) we could edit the code to change this to an unconditional jump. I chose the last option, but all are just as good and simple to implement. IDA Pro has a patch function so we can easily change the byte code to alter the <strong>jnz</strong> and change it to <strong>jmp</strong>. Lets change:</p>
+<figure><img src="/images/reverse-challenge3.png"/>
+</figure>
+
+<p>to</p>
+<figure><img src="/images/reverse-challenge4.png"/>
+</figure>
+
+<p>The exit function should never be reached now as the unconditional jump should completely ignore it and we should be able to run the program in a debugger without any issues</p>
+<figure><img src="/images/reverse-challenge5.png"/>
+</figure>
+
+<p>Now we take take a look at what the executable is doing. A good place to start is the &ldquo;Are you feeling lucky today?&rdquo; string, since it&rsquo;s a fair assumption that the executable will be looking for input at this point which will determine the output of the program.  We see a bunch of <strong>cmp</strong> and <strong>jz</strong>&rsquo;s that look interesting&hellip;</p>
+<figure><img src="/images/reverse-challenge6.png"/>
+</figure>
+
+<p>Lets also have a look at the <strong>@EHJ~@DZEL</strong> string that looks XOR like-ish</p>
+<figure><img src="/images/reverse-challenge7.png"/>
+</figure>
+
+<p>This last section is the password checking function which, with review, does the following:</p>
+<ul>
+<li>Takes a character of our user entered password at <strong>08048779</strong> into <strong>eax</strong> and then at <strong>0804877C</strong> adds one to it ( in hex )</li>
+<li>At <strong>0804878C 0xFA</strong> is assigned to edx ( see <strong>0804876C</strong> for the initial memory assignment ) and is then bitwise ADD&rsquo;ed with 0x2b</li>
+<li>The result of which is then xor&rsquo;ed with the vaule in eax (a character from our password). This process loops around until each byte of our password has been xor&rsquo;ed and is them compared with the <strong>@EHJ~@DZEL</strong> string.</li>
+</ul>
+<p>Lets reverse the process to work out what our password needs to be. First we need to bitwise ADD 0x2b and 0xfa to work out what we need to XOR our string with - in python we can do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print <span style="color:#ae81ff">0x2b</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xfa</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">42</span>
+</span></span></code></pre></div><p>We can then XOR the string @EHJ~@DZEL with 42:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join([chr(ord(c) <span style="color:#f92672">^</span> <span style="color:#ae81ff">42</span>) <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> <span style="color:#e6db74">&#39;@EHJ~@DZEL&#39;</span>])
+</span></span><span style="display:flex;"><span>job<span style="color:#960050;background-color:#1e0010">`</span>Tjnpof
+</span></span></code></pre></div><p>Finally we now need to account for that +1 at <strong>0804877C</strong> ( so we minus one here, since we are reversing the process )</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join([chr(ord(c) <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> ) <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> <span style="color:#e6db74">&#39;job`Tjnpof&#39;</span>])
+</span></span><span style="display:flex;"><span>ina_Simone
+</span></span></code></pre></div><p>At this point we have our password decryption routine, but have not yet worked out how to trigger it. Lets go back to the code after <strong>&ldquo;Are you feeling lucky today&rdquo;</strong> and those compare and jump statements:</p>
+<figure><img src="/images/reverse-challenge8.png"/>
+</figure>
+
+<p>We know that:</p>
+<ul>
+<li>0x43 in ASCII is C ( the compare at 08048AF4 )</li>
+<li>0x4E in ASCII is N ( the compare at 08048AF9 )</li>
+<li>0x41 in ASCII is A ( the compare at 08048AFE )</li>
+</ul>
+<p>This function takes our user entered string, take the first charters and depending on if that character is a C, N, A or another jumps to different areas of code. This pretty much tells us what our password is. Of course if it wasn&rsquo;t obvious we could try all three and step through each code execution branch in a debugger, but at this point it&rsquo;s pretty logical to assume the password is <strong>Nina_Simone</strong>&hellip;lets try it:</p>
+<figure><img src="/images/reverse-challenge9.png"/>
+</figure>
+
+<p>Rock and roll&hellip;. There a bunch of code left we can reverse, like the routine that writes a file to /tmp but I&rsquo;ll leave that for the interested reader to do themselves</p>
+
+    </div>
+
+  
+
+
+    <div class="post-tags">
+        
+      
+    </div>
+
+  
+
+    <div class="post-comment">
+          
+          
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+<div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2014  - 2023 </span>
+         
+          <span class="author" itemprop="copyrightHolder"><a href="https://www.richfairhurst.co.uk">Rich Fairhurst</a> </span>
+         
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <link crossorigin="anonymous" integrity="sha384-yziQACfvCVwLqVFLqkWBYRO3XeA4EqzfXKGwaWnenYn5XzqfJFlFdKEmvutIQdKb" href="https://lib.baomitu.com/lightgallery/1.10.0/css/lightgallery.min.css" rel="stylesheet">
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>
