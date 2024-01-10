@@ -98,14 +98,12 @@ The course was run over 6 weeks and included a bunch of video lectures each week
                 
                 <a class="menu-item" href="/about" title="">About</a>
                 
-                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
         </div>
     </div>
 </nav>
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
      <div class="container">
         <div class="navbar-header">
-            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://www.richfairhurst.co.uk">Rich Fairhurst</a></div>
             <div class="menu-toggle">
                 <span></span><span></span><span></span>
             </div>
@@ -154,7 +152,9 @@ The course was run over 6 weeks and included a bunch of video lectures each week
 <p>In a nutshell a download link was provided to a file and the challenge was to determine the correct password. You can find a locally cached copy of the challenge file <a href="/downloads/reverse-challenge">here</a></p>
 <p>Lets start by running the command <strong>file</strong> on the executable to confirm what type of file it is ( and if they were being kind and had left any debugging symbols :-)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rich<span style="color:#a6e22e">@ubuntu</span>:<span style="color:#f92672">~</span><span style="color:#960050;background-color:#1e0010">$</span> file reverse<span style="color:#f92672">-</span>challenge
-</span></span><span style="display:flex;"><span>reverse<span style="color:#f92672">-</span>challenge: ELF <span style="color:#ae81ff">32</span><span style="color:#f92672">-</span>bit LSB  executable, Intel <span style="color:#ae81ff">80386</span>, version <span style="color:#ae81ff">1</span> (SYSV), dynamically linked (uses shared libs), <span style="color:#66d9ef">for</span> GNU<span style="color:#f92672">/</span>Linux <span style="color:#ae81ff">2.6.32</span>, BuildID[sha1]<span style="color:#f92672">=</span><span style="color:#ae81ff">43</span>cb53541a366b39ab4b73f31a4fac8961ad959c, stripped
+</span></span><span style="display:flex;"><span>reverse<span style="color:#f92672">-</span>challenge: ELF <span style="color:#ae81ff">32</span><span style="color:#f92672">-</span>bit LSB  executable, Intel <span style="color:#ae81ff">80386</span>, version <span style="color:#ae81ff">1</span> (SYSV),
+</span></span><span style="display:flex;"><span>dynamically linked (uses shared libs), <span style="color:#66d9ef">for</span> GNU<span style="color:#f92672">/</span>Linux <span style="color:#ae81ff">2.6.32</span>, 
+</span></span><span style="display:flex;"><span>BuildID[sha1]<span style="color:#f92672">=</span><span style="color:#ae81ff">43</span>cb53541a366b39ab4b73f31a4fac8961ad959c, stripped
 </span></span></code></pre></div><p>And then run strings to look for anything interesting&hellip;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rich<span style="color:#a6e22e">@ubuntu</span>:<span style="color:#f92672">~</span><span style="color:#960050;background-color:#1e0010">$</span> strings reverse<span style="color:#f92672">-</span>challenge
 </span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
@@ -271,7 +271,7 @@ The course was run over 6 weeks and included a bunch of video lectures each week
 <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2014  - 2023 </span>
+        <span itemprop="copyrightYear">2014  - 2024 </span>
          
           <span class="author" itemprop="copyrightHolder"><a href="https://www.richfairhurst.co.uk">Rich Fairhurst</a> </span>
          
@@ -285,15 +285,6 @@ The course was run over 6 weeks and included a bunch of video lectures each week
 
 
 
-
-
-
-    
-    <link crossorigin="anonymous" integrity="sha384-yziQACfvCVwLqVFLqkWBYRO3XeA4EqzfXKGwaWnenYn5XzqfJFlFdKEmvutIQdKb" href="https://lib.baomitu.com/lightgallery/1.10.0/css/lightgallery.min.css" rel="stylesheet">
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
-    
-  
 
 
 
