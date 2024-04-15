@@ -6,35 +6,28 @@
     <description>Recent content in Posts on Rich Fairhurst</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.richfairhurst.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.richfairhurst.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up k8s on gcloud for home use</title>
       <link>https://www.richfairhurst.co.uk/2022/2022-04-19-setting_up_k8s_on_gcloud_for_home/</link>
       <pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://www.richfairhurst.co.uk/2022/2022-04-19-setting_up_k8s_on_gcloud_for_home/</guid>
       <description>I recently completed my Certified Kubernetes Administrator and Certified Kubernetes Security Specialist certifications. Theres a pretty famous &amp;lsquo;Kubernetes the hard way&amp;rsquo; document that explains how to setup Kubernetes manually on google cloud, which, while a good activity to go through to really understand the process, I found the following way to setup (and tear down) a cluster much quicker and easier to allow for practicing various topics in the CKA and CKS exam - which I have shamelessly lifted from here and tweaked slightly to just install some of the CKS security tools for the CKS exam.</description>
     </item>
-    
     <item>
       <title>BSides London 2014: Challenge 1</title>
       <link>https://www.richfairhurst.co.uk/2014/2014-12-14-bsides-london-2014-challenge-1/</link>
       <pubDate>Sun, 14 Dec 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.richfairhurst.co.uk/2014/2014-12-14-bsides-london-2014-challenge-1/</guid>
-      <description>This year I entered my first BSidesLondon challenge. Each year BSidesLondon post challenges in order to win a ticket to the event. The first challenge was to analyze an executable and shutdown the botnet - and in doing so, get the girl and save the world! (OK I made that last bit up, but it&amp;rsquo;s nice to have a story around it)
-This post was originally my submission but I didn&amp;rsquo;t win&amp;hellip;probably because there are far better people than me submitting reports and in a small way it probably didn&amp;rsquo;t help that I was lazy and didn&amp;rsquo;t bother to decode the password function and just took the password off the stack and shut the botnet down.</description>
+      <description>This year I entered my first BSidesLondon challenge. Each year BSidesLondon post challenges in order to win a ticket to the event. The first challenge was to analyze an executable and shutdown the botnet - and in doing so, get the girl and save the world! (OK I made that last bit up, but it&amp;rsquo;s nice to have a story around it)&#xA;This post was originally my submission but I didn&amp;rsquo;t win&amp;hellip;probably because there are far better people than me submitting reports and in a small way it probably didn&amp;rsquo;t help that I was lazy and didn&amp;rsquo;t bother to decode the password function and just took the password off the stack and shut the botnet down.</description>
     </item>
-    
     <item>
       <title>Coursera Reverse Challenge</title>
       <link>https://www.richfairhurst.co.uk/2014/2014-07-23-reverse-challenge/</link>
       <pubDate>Wed, 23 Jul 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.richfairhurst.co.uk/2014/2014-07-23-reverse-challenge/</guid>
-      <description>Last month the Coursera course &amp;lsquo;Malicious Software and its Underground Economy: Two Sides to Every Story&amp;rsquo; finished.
-The course was run over 6 weeks and included a bunch of video lectures each week followed by additional reading and a quiz. You can find an overview of the course here. It looks like this was the second time the course has been run - which is probably about right, I&amp;rsquo;m normally late to the party.</description>
+      <description>Last month the Coursera course &amp;lsquo;Malicious Software and its Underground Economy: Two Sides to Every Story&amp;rsquo; finished.&#xA;The course was run over 6 weeks and included a bunch of video lectures each week followed by additional reading and a quiz. You can find an overview of the course here. It looks like this was the second time the course has been run - which is probably about right, I&amp;rsquo;m normally late to the party.</description>
     </item>
-    
   </channel>
 </rss>
