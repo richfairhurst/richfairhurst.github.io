@@ -14,7 +14,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.richfairhurst.co.uk/about/</guid>
-      <description>&lt;p&gt;Hiya! I&amp;rsquo;m Rich, I do cyber security stuff (for about 20 years at this point). Day to day that tends to include a range of activities around leadership and risk management although i&amp;rsquo;m most happy when knee deep in a debugger or decompiler. Sadly, that dones&amp;rsquo;t happen as much these days.&lt;/p&gt;
+      <description>&lt;p&gt;Hiya! I&amp;rsquo;m Rich, I do cyber security stuff (for about 20 years at this point). Day to day that tends to include a range of activities around leadership and risk management although i&amp;rsquo;m most happy when knee deep in a debugger or decompiler. Sadly, that doesn&amp;rsquo;t happen as much these days.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ve managed teams as small as 2 and larger than 100 across various different types of roles and always made it a case to never to lose my technical hands-on abilities. I&amp;rsquo;m a big fan of the &lt;a href=&#34;http://blog.idonethis.com/two-pizza-team/&#34;&gt;two pizza box rule&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I enjoy taking complex problems and producing eloquent solutions, love a good CTF, and who&amp;rsquo;s not playing with AI at this point as well!&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -38,6 +38,7 @@
 &lt;p&gt; &lt;/p&gt;
 &lt;h2 id=&#34;various-certifications-i-have-gained&#34;&gt;Various certifications I have gained&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;SANS GIAC Red Team Professional (GRTP)&lt;/li&gt;
 &lt;li&gt;Certified Kubernetes Security Specialist (CKS)&lt;/li&gt;
 &lt;li&gt;Certified Kubernetes Administrator (CKA)&lt;/li&gt;
 &lt;li&gt;SANS GIAC Defending Advanced Threats (GDAT)&lt;/li&gt;
@@ -61,6 +62,7 @@
 &lt;li&gt;&lt;a href=&#34;https://www.sans.org/course/reverse-engineering-malware-malware-analysis-tools-techniques&#34;&gt;SANS 610 Reverse-Engineering Malware: Malware Analysis Tools and Techniques (GREM)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.sans.org/course/defeating-advanced-adversaries-kill-chain-defenses&#34;&gt;SANS 599 Defeating Advanced Adversaries - Purple Team Tactics &amp;amp; Kill Chain Defenses (GDAT)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.sans.org/course/cyber-threat-intelligence&#34;&gt;SANS 578 Cyber Threat Intelligence (GCTI)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sans.org/cyber-security-courses/red-team-operations-adversary-emulation/&#34;&gt;SANS 565 Red Team Operations and Adversary Emulation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.sans.org&#34;&gt;SANS 554 Blockchain and Smart Contract Security&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://institute.sektor7.net/red-team-operator-malware-development-essentials&#34;&gt;Sektor7 RED TEAM Operator: Malware Development Essentials Course&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.exploitlab.net/&#34;&gt;Advanced Exploit Labs&lt;/a&gt;&lt;/li&gt;
