@@ -34,10 +34,12 @@
   <link rel="stylesheet" href="/css/main.min.css">
 
 
-  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="BSides London 2014: Challenge 1"/>
-<meta name="twitter:description" content="This year I entered my first BSidesLondon challenge. Each year BSidesLondon post challenges in order to win a ticket to the event. The first challenge was to analyze an executable and shutdown the botnet - and in doing so, get the girl and save the world! (OK I made that last bit up, but it&rsquo;s nice to have a story around it)
-This post was originally my submission but I didn&rsquo;t win&hellip;probably because there are far better people than me submitting reports and in a small way it probably didn&rsquo;t help that I was lazy and didn&rsquo;t bother to decode the password function and just took the password off the stack and shut the botnet down."/>
-<meta name="twitter:site" content="@richfairhurst"/>
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BSides London 2014: Challenge 1">
+  <meta name="twitter:description" content="This year I entered my first BSidesLondon challenge. Each year BSidesLondon post challenges in order to win a ticket to the event. The first challenge was to analyze an executable and shutdown the botnet - and in doing so, get the girl and save the world! (OK I made that last bit up, but it’s nice to have a story around it)
+This post was originally my submission but I didn’t win…probably because there are far better people than me submitting reports and in a small way it probably didn’t help that I was lazy and didn’t bother to decode the password function and just took the password off the stack and shut the botnet down.">
+      <meta name="twitter:site" content="@richfairhurst">
 
   <script type="application/ld+json">
 {
@@ -89,7 +91,7 @@ This post was originally my submission but I didn&rsquo;t win&hellip;probably be
         <nav class="navbar">
     <div class="container">
         <div class="navbar-header header-logo">
-        	<a href="https://www.richfairhurst.co.uk">Rich Fairhurst</a>
+        	<a href="https://www.richfairhurst.co.uk/">Rich Fairhurst</a>
         </div>
         <div class="menu navbar-right">
                 
@@ -174,11 +176,11 @@ This post was originally my submission but I didn&rsquo;t win&hellip;probably be
 <!-- raw HTML omitted -->
 <h3 id="32-upx-packed">3.2 UPX Packed</h3>
 <p>UPX is available from <a href="http://upx.sourceforge.net">http://upx.sourceforge.net</a> and according to the website clams to be the “Ultimate Packer for eXecutables”. The UPX program offers the ability to pack as well as unpack any previously packed executables so unpacking is simply a case of running the executable through UPX with the -d flag to decompress using the following command:</p>
-<figure><img src="/images/malware1.png"/>
+<figure><img src="/images/malware1.png">
 </figure>
 
 <p>Having run this command the original PE header section are visible and the file can be decompiled and investigated further:</p>
-<figure><img src="/images/malware2.png"/>
+<figure><img src="/images/malware2.png">
 </figure>
 
 <p>Having &lsquo;unpacked&rsquo; the executable we are now able to examine the uncompressed code.</p>
@@ -224,19 +226,19 @@ This post was originally my submission but I didn&rsquo;t win&hellip;probably be
 </span></span></code></pre></div><p>These strings can provide a clue as to what the executable does at runtime</p>
 <h3 id="34-anti-debugger---isdebuggerpresent">3.4 Anti Debugger - IsDebuggerPresent</h3>
 <p>When attempting to run the executable in a debugger the application quits with an error message of ‘No Malware here, honest gov!’ as seen in the following screen shot.</p>
-<figure><img src="/images/malware3.png"/>
+<figure><img src="/images/malware3.png">
 </figure>
 
 <p>The Windows API has several functions that can be used by malicious software to determine if a debugger is being used for analysis. The IsDebuggerPresent API function searches the Process Environment Block (PEB) for the field “IsDebugged”, which will return zero if the executable is not running in the context of a debugger or a nonzero value if a debugger is attached.</p>
 <p>Decompiling the executable it is possible to locate the following function that calls IsDebuggerPresent which then jumps to a function that sets up a dialog box and then exits if a non zero value is returned</p>
-<figure><img src="/images/malware4.png"/>
+<figure><img src="/images/malware4.png">
 </figure>
 
 <p>Typically the easiest way to overcome a call to an anti-debugger API function is to manually modify the executable during execution to not call the function, or modify the flag post call to ensure that a negative response is returned.  Below you can see the call to the function and the return with a nonzero value.</p>
-<figure><img src="/images/malware12.png"/>
+<figure><img src="/images/malware12.png">
 </figure>
 
-<figure><img src="/images/malware13.png"/>
+<figure><img src="/images/malware13.png">
 </figure>
 
 <p>We could dynamically patch the return so that it returns zero, or we could patch the binary however Immunity Debugger provides a simple method of doing this with the <em>!Hidebug IsDebuggerPresent</em> pyCommand which patches kernel32.dll to return a false flag. This allowed investigations into the executable to continue.</p>
@@ -252,7 +254,7 @@ This post was originally my submission but I didn&rsquo;t win&hellip;probably be
 <p>On execution bot.exe first issues a HTTP GET request for the following URL</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>http:<span style="color:#f92672">//</span>ghowen<span style="color:#f92672">.</span>me<span style="color:#f92672">/</span>malfor<span style="color:#f92672">/</span>cnc<span style="color:#f92672">.</span>php<span style="color:#960050;background-color:#1e0010">?</span>id<span style="color:#f92672">=</span>xx<span style="color:#f92672">%</span>uid<span style="color:#f92672">=</span>yy
 </span></span></code></pre></div><p>Where xx is the computer name and yy is the name of the account the application is running under. The servers responds with an IRC chat room The screen shot below shows this request captured via WireShark:</p>
-<figure><img src="/images/malware5.png"/>
+<figure><img src="/images/malware5.png">
 </figure>
 
 <p><strong>Note:</strong> Now the challenge is over the link is no longer valid and the server will return a 404 when queried. In order to replicate this off-line. ApateDNS can be used to re-direct the DNS for ghowen.me to a server under your control. For a simple python interface to return a similar response try something like this</p>
@@ -275,7 +277,7 @@ This post was originally my submission but I didn&rsquo;t win&hellip;probably be
 <p>Browsing the website at ghowen.me the domain appears to be owned by Gareth Owen a university lecturer at Portsmouth University in the UK and hosted at a virtual server at <a href="http://www.tagadab.com">Tagabab</a>. This was confirmed by the whois information. While the domain was registered under the company name of ‘XYZ Circuits Ltd’ and and an individual of ‘Larry Bevois&rsquo;, the email address used ties back to Gareth Owen’s gmail email account, used elsewhere. In addition the address used in the registration is also part of the University of Portsmouth campus. The website appears to be 3  - 4 month old according to on-line web archives such at Netcraft.</p>
 <h3 id="7-irc-communication">7. IRC Communication</h3>
 <p>Having gathered the irc chat room information from the ghowen.me website the executable attempts to join the IRC server irc.efnet.fr. Each time the executable was run during analyses this connection was dropped from the server with the error message ‘You are not authorized to use this server’. This is probably because the analysis is being performed in the UK.</p>
-<figure><img src="/images/malware6.png"/>
+<figure><img src="/images/malware6.png">
 </figure>
 
 <p>Having failed to connect to irc.efnet.fr the executable then attempts to connect to irc.swepipe.net.</p>
@@ -288,29 +290,29 @@ This post was originally my submission but I didn&rsquo;t win&hellip;probably be
 <p><strong>Hello</strong> -  Echo’s the following to the main chat room “Hello %s I’m a bot thats part of the BSides London Challenge”  where %s is the user who send the private message</p>
 <p><strong>IDENT</strong> - Echo’s back the computer name and the user account that the bot is running on to the main chat room</p>
 <p><strong>SHUTDOWN</strong> - when supplied with the correct password, the following is echo’ed to the user in a private message “bingo - botnet shutting down…” and then the executable quits IRC with the message of “Botnet shutdown” and display a pop up window on the machine its running on asking if the Bot should exit or restart. When an incorrect password is supplied to the SHUTDOWN message the executable echo’s the following to the main chat room “wrong pw” - one discrepancy was discovered with this - when using the password “iamborg” the private message “so close yet so far…wrong pw!” was returned.Interestingly the string &ldquo;iamborg&rdquo; was not found while running strings on the executable, but can be seen on the stack during runtime. This suggests that it is build dynamically at runtime. Often malware authors do this deliberately to make it harder for analysis to occur.</p>
-<figure><img src="/images/malware14.png"/>
+<figure><img src="/images/malware14.png">
 </figure>
 
 <p>Loading the executable into IDA Pro and searching for the ASCII string ‘bingo - botnet shutting down’ leads to a section IDA Pro labeled as loc_410143C. Reviewing functions that call this sequence of commands at loc_410143C the application flow can start to be determined. Prior to the section that shutdown the bot is the following:</p>
-<figure><img src="/images/malware7.png"/>
+<figure><img src="/images/malware7.png">
 </figure>
 
 <p>We can&rsquo;t see the string &lsquo;iamborg yet&rsquo; but the ASCII string <strong>HCNFJT@</strong> seems related. If we search IDAPro for occurrences of this string we&rsquo;re lead to the following function:</p>
-<figure><img src="/images/malware16.png"/>
+<figure><img src="/images/malware16.png">
 </figure>
 
 <p>Here the application is taking the ASCII string <strong>HCNFJT@</strong> and byte by byte XOR&rsquo;ing it with the hex code 0x21&hellip;. One each loop around 1 is added to ebx, which in turn increments the XOR&rsquo;ed string, so 0x21 becomes 0x22, then 0x23 etc until the XOR is complete which results in the string <strong>&ldquo;iamborg&rdquo;</strong>. As the testing above showed this string isn&rsquo;t the password needed to shutdown the botnet so further analysis was needed</p>
 <p>Looking at the function prior to the shutdown function, we can see that the <strong>HCNFJT@</strong> is pushed on to the stack and then we jump to a function labeled as sub_4014BE. This function takes a bunch or arguments and variables:</p>
-<figure><img src="/images/malware17.png"/>
+<figure><img src="/images/malware17.png">
 </figure>
 
 <p>Using Immunity Debugger we are able to discover what these are:</p>
-<figure><img src="/images/malware18.png"/>
+<figure><img src="/images/malware18.png">
 </figure>
 
 <p>Here we can see that arg_0 maps to the IRC username of the person sending the private message, arg_04 maps to the string &lsquo;iamborg&rsquo;</p>
 <p>If we follow this function further we get to the following code:</p>
-<figure><img src="/images/malware19.png"/>
+<figure><img src="/images/malware19.png">
 </figure>
 
 <p>Also of note here that is 1Ah is pushed and then popped off the stack, and that 41h is being added to dl.</p>
@@ -328,11 +330,11 @@ This post was originally my submission but I didn&rsquo;t win&hellip;probably be
 </span></span></code></pre></div><p>As the function loops around you can see in a debugger the password developing, however sometimes it is easier doing the maths outside of a debugger in order to understand what&rsquo;s happening. The following is a python representation of a single loop around the above block:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print (chr((ord(<span style="color:#e6db74">&#34;j&#34;</span>) <span style="color:#f92672">+</span> ord(<span style="color:#e6db74">&#34;i&#34;</span>)) <span style="color:#f92672">%</span> <span style="color:#ae81ff">0x1a</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x41</span>))
 </span></span></code></pre></div><p>Once this loop has finished looking at the Registers (top right section of the above screen shot) ECX contains the password that needs to be supplied with the SHUTDOWN command in order to ensure the jump to the shutdown function occurs - in this case it is <strong>DPFANJB</strong>. Suppling this with the SHUTDOWN command results in the executable shutting down with the behavior described previously:</p>
-<figure><img src="/images/malware9.png"/>
+<figure><img src="/images/malware9.png">
 </figure>
 
 <p>Once supplied the executable pop&rsquo;s up a window on the client machine and terminates the IRC session</p>
-<figure><img src="/images/malware10.png"/>
+<figure><img src="/images/malware10.png">
 </figure>
 
 <h3 id="8-conclusion">8. Conclusion</h3>
@@ -370,7 +372,7 @@ This post was originally my submission but I didn&rsquo;t win&hellip;probably be
         
         <span itemprop="copyrightYear">2014  - 2024 </span>
          
-          <span class="author" itemprop="copyrightHolder"><a href="https://www.richfairhurst.co.uk">Rich Fairhurst</a> </span>
+          <span class="author" itemprop="copyrightHolder"><a href="https://www.richfairhurst.co.uk/">Rich Fairhurst</a> </span>
          
     </div>
 </footer>

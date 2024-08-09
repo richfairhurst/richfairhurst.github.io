@@ -39,11 +39,11 @@
 &lt;h2 id=&#34;various-certifications-i-have-gained&#34;&gt;Various certifications I have gained&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;SANS GIAC Red Team Professional (GRTP)&lt;/li&gt;
-&lt;li&gt;Certified Kubernetes Security Specialist (CKS)&lt;/li&gt;
-&lt;li&gt;Certified Kubernetes Administrator (CKA)&lt;/li&gt;
 &lt;li&gt;SANS GIAC Defending Advanced Threats (GDAT)&lt;/li&gt;
 &lt;li&gt;SANS GIAC Exploit Researcher and Advanced Penetration Tester (GXPN)&lt;/li&gt;
 &lt;li&gt;SANS GIAC Reverse Engineering Malware (GREM)&lt;/li&gt;
+&lt;li&gt;Certified Kubernetes Security Specialist (CKS)&lt;/li&gt;
+&lt;li&gt;Certified Kubernetes Administrator (CKA)&lt;/li&gt;
 &lt;li&gt;SANS GIAC Cyber Threat Intelligence (GCTI)&lt;/li&gt;
 &lt;li&gt;Offensive Security Certified Professional (OSCP)&lt;/li&gt;
 &lt;li&gt;Offensive Security Wireless Professional (OSWP)&lt;/li&gt;
@@ -64,6 +64,7 @@
 &lt;li&gt;&lt;a href=&#34;https://www.sans.org/course/cyber-threat-intelligence&#34;&gt;SANS 578 Cyber Threat Intelligence (GCTI)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.sans.org/cyber-security-courses/red-team-operations-adversary-emulation/&#34;&gt;SANS 565 Red Team Operations and Adversary Emulation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.sans.org&#34;&gt;SANS 554 Blockchain and Smart Contract Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://institute.sektor7.net/rto-maldev-intermediate&#34;&gt;Sektor7 RED TEAM Operator: Malware Development Intermediate Course&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://institute.sektor7.net/red-team-operator-malware-development-essentials&#34;&gt;Sektor7 RED TEAM Operator: Malware Development Essentials Course&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.exploitlab.net/&#34;&gt;Advanced Exploit Labs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.mdsec.co.uk/education/wahh-live-training/&#34;&gt;Web Application Hackers Handbook Live&lt;/a&gt;&lt;/li&gt;
@@ -71,7 +72,7 @@
 &lt;p&gt; &lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;counties-ive-either-worked-visited-or-lived-in&#34;&gt;Counties i&amp;rsquo;ve either worked, visited or lived in&lt;/h2&gt;
-&lt;figure&gt;&lt;img src=&#34;../images/countries.png&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;../images/countries.png&#34;&gt;
 &lt;/figure&gt;
 
 &lt;p&gt; &lt;/p&gt;
